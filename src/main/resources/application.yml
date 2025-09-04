@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:promotions-db
+    generate-unique-name: false
+    driver-class-name: org.h2.Driver
+    username: ranjith
+    password: password
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false
+        trace: false
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
